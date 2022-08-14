@@ -23,8 +23,11 @@ def compare(images, labels=None, cmap=None):
 def hls2rgb(image):
     return cv2.cvtColor(image, cv2.COLOR_HLS2RGB)
 
-def read_image_hls(img_path):
+def rgb2hls(image):
+    return cv2.cvtColor(image, cv2.COLOR_RGB2HLS)
+
+def read_image_rgb(img_path):
     image = cv2.imread(img_path)
-    return cv2.cvtColor(image, cv2.COLOR_BGR2HLS)
+    return cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 
